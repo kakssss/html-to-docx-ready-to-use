@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/generate-docx.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/generate-docx", "dest": "api/generate-docx.js" }
+  ]
+}
