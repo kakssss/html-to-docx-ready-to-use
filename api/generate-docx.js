@@ -31,7 +31,8 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const convertFn = sandbox.convertHTMLToDOCX;
+    const convertFn = sandbox.window.convertHTMLToDOCX || sandbox.convertHTMLToDOCX;
+
 
     const blob = await convertFn(html, {
       orientation: "portrait",
